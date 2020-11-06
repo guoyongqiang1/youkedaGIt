@@ -1,7 +1,7 @@
 [增强for循环](https://ham.youkeda.com/articles/detail/5f3757005e205f30b2c2b140)
 
 调用字符串对象方法：
-字符串长度length
+>字符串长度length
 取出字符串中的一个字charAt
 去掉左右多余的空格trim
 查找字符串indexOf
@@ -15,3 +15,16 @@
 字符串比较equals
 数字和字符串转化Integer.parseInt
 使用valueOf强制把数字转化为字符串
+
+字符串转化为日期时间：
+    // 把字符串转化位 LocalDate 对象，并得到字符串匹配的日期
+    LocalDate date2 = LocalDate.parse("2019-01-01");
+        如果日期字符串的格式不是yyyy-MM-dd,那就要借助DateTimeFormatter
+        DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+        // 把字符串转化位 LocalDate 对象，并得到字符串匹配的日期
+        LocalDate date2 = LocalDate.parse("2019/01/01",df);
+LocalDate类方法：
+                plusDays（天数）
+                isBefore
+                isAfter
+
